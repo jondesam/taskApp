@@ -2,10 +2,9 @@ const mongoose = require("mongoose");
 const Task = require("../models/task");
 const User = require("../models/user");
 
-const connectionURL = "mongodb://127.0.0.1:27017";
 const databaseName = "task-manager-RESTFul";
 
-mongoose.connect(connectionURL + "/" + databaseName, {
+mongoose.connect(process.env.MONGODB_URL + "/" + databaseName, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -15,7 +14,7 @@ mongoose.connect(connectionURL + "/" + databaseName, {
 // const me = new User({
 //   name: "     Mike    ",
 //   password: " PassWord     ",
-//   email: "ADSFER@adsf.com     " 
+//   email: "ADSFER@adsf.com     "
 // });
 
 // me.save()
