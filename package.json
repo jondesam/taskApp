@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
-    "mongo": "/Users/jonhyun/mongodb/bin/mongod --dbpath=/Users/jonhyun/mongodb-data"
+    "mongo": "/Users/jonhyun/mongodb/bin/mongod --dbpath=/Users/jonhyun/mongodb-data",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
+    "jest": "^24.9.0",
     "nodemon": "^2.0.2"
   }
 }
